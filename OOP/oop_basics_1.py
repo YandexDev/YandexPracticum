@@ -8,15 +8,27 @@ class Contact:
 
 
 # здесь создайте объекты mike и vlad
-mike = Contact('Михаил Булгаков', '2-03-27',
-               'Россия, Москва, Большая Пироговская, дом 35б, кв. 6', '15.05.1891')
-vlad = Contact('Владимир Маяковский', '73-88',
-               'Россия, Москва, Лубянский проезд, д. 3, кв. 12', '19.07.1893')
+mike = Contact(
+    "Михаил Булгаков",
+    "2-03-27",
+    "Россия, Москва, Большая Пироговская, дом 35б, кв. 6",
+    "15.05.1891",
+)
+vlad = Contact(
+    "Владимир Маяковский",
+    "73-88",
+    "Россия, Москва, Лубянский проезд, д. 3, кв. 12",
+    "19.07.1893",
+)
 
 
 def print_contact():
-    print(f"{mike.name} — адрес: {mike.address}, телефон: {mike.phone}, день рождения: {mike.birthday}")
-    print(f"{vlad.name} — адрес: {vlad.address}, телефон: {vlad.phone}, день рождения: {vlad.birthday}")
+    print(
+        f"{mike.name} — адрес: {mike.address}, телефон: {mike.phone}, день рождения: {mike.birthday}"
+    )
+    print(
+        f"{vlad.name} — адрес: {vlad.address}, телефон: {vlad.phone}, день рождения: {vlad.birthday}"
+    )
 
 
 # здесь вызовите функцию print_contact(),

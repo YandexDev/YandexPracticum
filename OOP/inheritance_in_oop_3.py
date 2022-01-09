@@ -3,12 +3,12 @@ class Human:
         self.name = name
 
     def __str__(self):
-        return f'{self.name},'
+        return f"{self.name},"
 
     # ответ по умолчанию для всех одинаковый, можно
     # доверить его родительскому классу
     def answer_question(self, question):
-        print('Очень интересный вопрос! Не знаю.')
+        print("Очень интересный вопрос! Не знаю.")
 
 
 class Student(Human):
@@ -27,11 +27,11 @@ class Student(Human):
 
 class Curator(Human):
     def __str__(self):
-        return f'{self.name},'
+        return f"{self.name},"
 
     def answer_question(self, question):
-        if question == 'мне грустненько, что делать?':
-            print('Держись, всё получится. Хочешь видео с котиками?')
+        if question == "мне грустненько, что делать?":
+            print("Держись, всё получится. Хочешь видео с котиками?")
         else:
             super().answer_question(question)
             # здесь нужно проверить, пришёл куратору знакомый вопрос или нет
@@ -42,38 +42,39 @@ class Curator(Human):
 
 class CodeReviewer(Human):
     def __str__(self):
-        return f'{self.name},'
+        return f"{self.name},"
 
     def answer_question(self, question):
-        if question == 'что не так с моим проектом?':
-            print('О, вопрос про проект, это я люблю.')
+        if question == "что не так с моим проектом?":
+            print("О, вопрос про проект, это я люблю.")
         else:
             super().answer_question(question)
 
 
 class Mentor(Human):
     def __str__(self):
-        return f'{self.name},'
+        return f"{self.name},"
 
     def answer_question(self, question):
-        if question == 'мне грустненько, что делать?':
-            print('Отдохни и возвращайся с вопросами по теории.')
-        elif question == 'как устроиться работать питонистом?':
-            print('Сейчас расскажу.')
+        if question == "мне грустненько, что делать?":
+            print("Отдохни и возвращайся с вопросами по теории.")
+        elif question == "как устроиться работать питонистом?":
+            print("Сейчас расскажу.")
         else:
             super().answer_question(question)
 
-
             # следующий код менять не нужно, он работает, мы проверяли
-student1 = Student('Тимофей')
-curator = Curator('Марина')
-mentor = Mentor('Ира')
-reviewer = CodeReviewer('Евгений')
-friend = Human('Виталя')
 
-student1.ask_question(curator, 'мне грустненько, что делать?')
-student1.ask_question(mentor, 'мне грустненько, что делать?')
-student1.ask_question(reviewer, 'когда каникулы?')
-student1.ask_question(reviewer, 'что не так с моим проектом?')
-student1.ask_question(friend, 'как устроиться на работу питонистом?')
-student1.ask_question(mentor, 'как устроиться работать питонистом?')
+
+student1 = Student("Тимофей")
+curator = Curator("Марина")
+mentor = Mentor("Ира")
+reviewer = CodeReviewer("Евгений")
+friend = Human("Виталя")
+
+student1.ask_question(curator, "мне грустненько, что делать?")
+student1.ask_question(mentor, "мне грустненько, что делать?")
+student1.ask_question(reviewer, "когда каникулы?")
+student1.ask_question(reviewer, "что не так с моим проектом?")
+student1.ask_question(friend, "как устроиться на работу питонистом?")
+student1.ask_question(mentor, "как устроиться работать питонистом?")
